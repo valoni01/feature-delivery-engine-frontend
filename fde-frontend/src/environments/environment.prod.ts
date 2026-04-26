@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseUrl: 'RENDER_BACKEND_URL_PLACEHOLDER/api/v1',
+  apiBaseUrl: 'https://feature-delivery-engine-production.up.railway.app/api/v1',
 };
