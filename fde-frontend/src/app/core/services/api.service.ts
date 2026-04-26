@@ -14,8 +14,9 @@ import {
   GitHubRepo,
 } from '../models';
 import { SettingsService } from './settings.service';
+import { environment } from '../../../environments/environment';
 
-const BASE = '/api/v1';
+const BASE = environment.apiBaseUrl;
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
