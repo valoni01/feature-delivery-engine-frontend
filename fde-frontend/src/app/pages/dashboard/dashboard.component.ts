@@ -34,7 +34,7 @@ import { StatusBadgeComponent } from '../../shared/status-badge.component';
         <div class="flex items-center justify-between border-b border-surface-200 px-6 py-4">
           <h2 class="font-semibold text-surface-900">Recent Workflows</h2>
           <a
-            routerLink="/workflows/new"
+            routerLink="/app/workflows/new"
             class="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
           >
             + New Workflow
@@ -45,7 +45,7 @@ import { StatusBadgeComponent } from '../../shared/status-badge.component';
           <div class="px-6 py-12 text-center">
             <p class="text-sm text-surface-400">No workflows yet.</p>
             <a
-              routerLink="/workflows/new"
+              routerLink="/app/workflows/new"
               class="mt-2 inline-block text-sm font-medium text-primary-600 hover:text-primary-700"
             >
               Create your first workflow &rarr;
@@ -55,7 +55,7 @@ import { StatusBadgeComponent } from '../../shared/status-badge.component';
           <div class="divide-y divide-surface-100">
             @for (wf of workflows(); track wf.id) {
               <a
-                [routerLink]="['/workflows', wf.id]"
+                [routerLink]="['/app/workflows', wf.id]"
                 class="flex items-center justify-between px-6 py-4 transition-colors hover:bg-surface-50"
               >
                 <div class="min-w-0 flex-1">

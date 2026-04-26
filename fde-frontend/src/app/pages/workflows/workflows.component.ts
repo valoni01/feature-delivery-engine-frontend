@@ -32,7 +32,7 @@ const ALL_STATUSES: WorkflowStatus[] = [
           </p>
         </div>
         <a
-          routerLink="/workflows/new"
+          routerLink="/app/workflows/new"
           class="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700"
         >
           + New Workflow
@@ -95,7 +95,7 @@ const ALL_STATUSES: WorkflowStatus[] = [
           <div class="px-6 py-12 text-center">
             <p class="text-sm text-surface-400">No workflows found.</p>
             <a
-              routerLink="/workflows/new"
+              routerLink="/app/workflows/new"
               class="mt-2 inline-block text-sm font-medium text-primary-600 hover:text-primary-700"
             >
               Create your first workflow &rarr;
@@ -121,7 +121,7 @@ const ALL_STATUSES: WorkflowStatus[] = [
               @for (wf of filtered(); track wf.id) {
                 <tr
                   class="cursor-pointer transition-colors hover:bg-surface-50"
-                  [routerLink]="['/workflows', wf.id]"
+                  [routerLink]="['/app/workflows', wf.id]"
                 >
                   <td class="px-6 py-3">
                     <p

@@ -4,6 +4,13 @@ import { LayoutComponent } from './layout/layout.component';
 export const routes: Routes = [
   {
     path: '',
+    loadComponent: () =>
+      import('./pages/landing/landing.component').then(
+        (m) => m.LandingComponent,
+      ),
+  },
+  {
+    path: 'app',
     component: LayoutComponent,
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },

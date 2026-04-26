@@ -32,7 +32,7 @@ interface NavItem {
             <a
               [routerLink]="item.path"
               routerLinkActive="bg-primary-50 text-primary-700 font-medium"
-              [routerLinkActiveOptions]="{ exact: item.path === '/dashboard' || item.path === '/workflows' }"
+              [routerLinkActiveOptions]="{ exact: item.path === '/app/dashboard' || item.path === '/app/workflows' }"
               class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-surface-600 transition-colors hover:bg-surface-100 hover:text-surface-900"
             >
               <span class="text-base" [innerHTML]="item.icon"></span>
@@ -56,7 +56,7 @@ interface NavItem {
         >
           <div></div>
           <a
-            routerLink="/settings"
+            routerLink="/app/settings"
             class="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-surface-500 transition-colors hover:bg-surface-100 hover:text-surface-900"
           >
             &#9881; Settings
@@ -72,10 +72,10 @@ interface NavItem {
 })
 export class LayoutComponent {
   readonly navItems: NavItem[] = [
-    { path: '/dashboard', label: 'Dashboard', icon: '&#9632;' },
-    { path: '/workflows', label: 'Workflows', icon: '&#9776;' },
-    { path: '/workflows/new', label: 'New Workflow', icon: '&#10010;' },
-    { path: '/help', label: 'Help', icon: '&#9432;' },
-    { path: '/settings', label: 'Settings', icon: '&#9881;' },
+    { path: '/app/dashboard', label: 'Dashboard', icon: '&#9632;' },
+    { path: '/app/workflows', label: 'Workflows', icon: '&#9776;' },
+    { path: '/app/workflows/new', label: 'New Workflow', icon: '&#10010;' },
+    { path: '/app/help', label: 'Help', icon: '&#9432;' },
+    { path: '/app/settings', label: 'Settings', icon: '&#9881;' },
   ];
 }

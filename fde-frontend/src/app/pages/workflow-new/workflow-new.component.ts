@@ -23,7 +23,7 @@ import { GitHubRepo } from '../../core/models';
           class="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800"
         >
           <strong>GitHub token required.</strong> Go to
-          <a routerLink="/settings" class="font-medium underline">Settings</a>
+          <a routerLink="/app/settings" class="font-medium underline">Settings</a>
           to add your personal access token before selecting a repository.
         </div>
       }
@@ -243,13 +243,13 @@ export class WorkflowNewComponent implements OnInit {
       .subscribe({
         next: (wf) => {
           this.api.runPipeline(wf.id).subscribe({
-            next: () => this.router.navigate(['/workflows', wf.id]),
+            next: () => this.router.navigate(['/app/workflows', wf.id]),
             error: (err) => {
               this.submitting.set(false);
               this.error.set(
                 err?.error?.detail ?? 'Pipeline failed to start.',
               );
-              this.router.navigate(['/workflows', wf.id]);
+              this.router.navigate(['/app/workflows', wf.id]);
             },
           });
         },
